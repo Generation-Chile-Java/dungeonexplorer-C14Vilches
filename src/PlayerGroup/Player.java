@@ -1,7 +1,5 @@
-package PlayerAndNPCs;
+package PlayerGroup;
 //Define una clase Player que encapsule los datos y comportamientos del jugador.
-
-import GameObjectGroup.GameObject;
 
 import java.util.HashMap;
 
@@ -42,6 +40,10 @@ public class Player {
 
     public void setPlayerInv(HashMap playerInv) {
         this.playerInv = playerInv;
+    }
+
+    public void setPlayerInv() {
+
     }
 
     //Proporciona métodos para que el jugador pueda recibir daño

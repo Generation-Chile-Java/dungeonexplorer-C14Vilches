@@ -6,7 +6,3 @@ public interface Room {
     void roomType();
     void roomNumer();
 }
-
-//atributos de clase pendientes
-/*atributos
-*/

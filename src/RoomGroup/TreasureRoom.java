@@ -3,7 +3,7 @@ package RoomGroup;
 
 public class TreasureRoom extends RoomEmpty{
     //cofre contiene tesoro o esta vacio
-    Boolean treasureInChest;
+    Boolean treasureInRoom;
     String treasureDescription;
 
     public TreasureRoom() {
@@ -11,16 +11,16 @@ public class TreasureRoom extends RoomEmpty{
 
     public TreasureRoom(String RoomName, String RoomType, int RoomNumber, String RoomDescription) {
         super(RoomName, RoomType, RoomNumber, RoomDescription);
-        this.treasureInChest = treasureInChest;
+        this.treasureInRoom = treasureInRoom;
         this.treasureDescription = treasureDescription;
     }
 
-    public Boolean getTreasureInChest() {
-        return treasureInChest;
+    public Boolean getTreasureInRoom() {
+        return treasureInRoom;
     }
 
-    public void setTreasureInChest(Boolean treasureInChest) {
-        this.treasureInChest = treasureInChest;
+    public void setTreasureInRoom(Boolean treasureInRoom) {
+        this.treasureInRoom = treasureInRoom;
     }
 
     public String getTreasureDescription() {
