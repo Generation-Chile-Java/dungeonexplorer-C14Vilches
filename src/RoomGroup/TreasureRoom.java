@@ -1,8 +1,8 @@
 package RoomGroup;
 //Crea una clase TreasureRoom que represente una sala con un tesoro.
 
-public class TreasureRoom extends RoomEmpty{
-    //cofre contiene tesoro o esta vacio
+public class TreasureRoom extends EmptyRoom {
+    //cofre contiene tesoro (descripcion) o esta vacio
     Boolean treasureInRoom;
     String treasureDescription;
 
@@ -11,7 +11,7 @@ public class TreasureRoom extends RoomEmpty{
 
     public TreasureRoom(String RoomName, String RoomType, int RoomNumber, String RoomDescription) {
         super(RoomName, RoomType, RoomNumber, RoomDescription);
-        this.treasureInRoom = treasureInRoom;
+        this.treasureInRoom = treasureInRoom; //TODO: Revisar warning "Variable is already assigned to this value"
         this.treasureDescription = treasureDescription;
     }
 

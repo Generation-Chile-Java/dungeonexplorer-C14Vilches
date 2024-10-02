@@ -2,7 +2,7 @@ package RoomGroup;
 //TODO: import RoomGroup.Room; RoomEmpty implements Room
 //Crea una clase EmptyRoom que represente una sala vacía.
 
-public class RoomEmpty {
+public class EmptyRoom {
     //atributos
     private String roomName;
     private String roomType;
@@ -10,11 +10,11 @@ public class RoomEmpty {
     private String roomDescription;
 
     //constructor vacio
-    public RoomEmpty() {
+    public EmptyRoom() {
     }
 
     //constructor lleno
-    public RoomEmpty(String RoomName, String RoomType, int RoomNumber, String RoomDescription) {
+    public EmptyRoom(String RoomName, String RoomType, int RoomNumber, String RoomDescription) {
         this.roomName = RoomName;
         this.roomType = RoomType;
         this.roomNumber = RoomNumber;
@@ -54,5 +54,5 @@ public class RoomEmpty {
 
     public void emptyRoomChecked (){
         System.out.println("No hay nada en este lugar, siguamos adelante.");
-    }
+    } //ERROR: Identifier expected TODO: Que esta generando este error ??????????
 }
