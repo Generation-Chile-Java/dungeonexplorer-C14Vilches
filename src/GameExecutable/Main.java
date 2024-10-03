@@ -1,6 +1,9 @@
 package GameExecutable;
 
 import PlayerGroup.Player;
+import PlayerGroup.PlayerAction;
+import PlayerGroup.PlayerMovement;
+
 import RoomGroup.EmptyRoom;
 import RoomGroup.EnemyRoom;
 import RoomGroup.TreasureRoom;
@@ -20,7 +23,7 @@ public class Main {
 
         nuevoJugador.setPlayerHP(nuevoJugador.getPlayerHP());
         nuevoJugador.setPlayerInv();
-        System.out.println("El nombre de tu personaje es " + nuevoJugador.getPlayerName() + ". \nTiene " + nuevoJugador.getPlayerHP() + " puntos de vida.\nEste es tu inventario actual: " + nuevoJugador.getPlayerInv() + ".");
+        System.out.println("El nombre de tu personaje es " + nuevoJugador.getPlayerName() + ". \nTiene " + nuevoJugador.getPlayerHP() + " puntos de vida.\nEste es tu inventario actual: " + nuevoJugador.getPlayerInv() + ". \n");
 
         //Inicializar serie de salas.
 
@@ -42,17 +45,55 @@ public class Main {
         System.out.println("Este calabozo tiene 3 salas:"); //una vacia, otra con un enemigo, y la ultima con un tesoro.
 
         ArrayList<String> calabozoBase = new ArrayList<>();
-        calabozoBase.add(listaSalasVacias.toString());
-        calabozoBase.add(listaSalasEnemigo.toString());
-        calabozoBase.add(listaSalasTesoro.toString());
-        System.out.println(calabozoBase);
+        calabozoBase.add(listaSalasVacias.getFirst().getRoomName());
+        calabozoBase.add(listaSalasEnemigo.getFirst().getRoomName());
+        calabozoBase.add(listaSalasTesoro.getFirst().getRoomName());
+        System.out.println(calabozoBase + "\n");
 
         //Implementa un bucle que permita al jugador moverse por las salas.
 
-        //idea
-        /*for (int i = 0; i < calabozoBase.size(); i++){
-            calabozoBase.get(i);
-        }*/
+        PlayerMovement movimiento = PlayerMovement.ESPERAR;
+
+        switch(movimiento) {
+            case NORTE:
+                System.out.println("El jugador se mueve al norte.");
+                break;
+            case ESTE:
+                System.out.println("El jugador se mueve al este.");
+                break;
+            case SUR:
+                System.out.println("El jugador se mueve al sur.");
+                break;
+            case OESTE:
+                System.out.println("El jugador se mueve al oeste.");
+                break;
+            default:
+                System.out.println("El jugador espera donde mismo está.");
+        }
+
         //Maneja las interacciones del jugador con las salas y los objetos.
+
+        PlayerAction acciones = PlayerAction.PENSAR;
+
+        switch(acciones) {
+            case MOVERSE:
+                System.out.println("El jugador se mueve al norte.");
+                break;
+            case LUCHAR:
+                System.out.println("El jugador se mueve al este.");
+                break;
+            case ESCAPAR:
+                System.out.println("El jugador se mueve al sur.");
+                break;
+            case REVISAR:
+                System.out.println("El jugador se mueve al oeste.");
+                break;
+            case USAR:
+                System.out.println("El jugador se mueve al .");
+                break;
+            default:
+                System.out.println("El jugador piensa a donde moverse.");
+        }
+
     }
 }
