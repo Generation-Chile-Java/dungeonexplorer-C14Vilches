@@ -1,6 +1,6 @@
 package RoomGroup;
 
-public class EnemyRoom extends EmptyRoom {
+public class EnemyRoom  extends EmptyRoom{
     Boolean enemyInRoom;
     int currentEnemy;
 
